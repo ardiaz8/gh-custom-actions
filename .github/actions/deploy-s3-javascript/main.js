@@ -14,7 +14,8 @@ function run() {
 // which local folders should be synchronized
 // with which remote S3 bucket.
 
-    core.notice('Hello from my custom JavaScript Action!');
+    const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}`
+    core.setOutput('website-url', websiteUrl) // ::set-output
 }
 
 run();
